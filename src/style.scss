@@ -210,6 +210,10 @@ main {
       height: auto;
     }
 
+    .hero-img-overlay{
+      width: 78vw;
+    }
+
     .hero-img {
       width: 100%;
       height: auto;
@@ -220,13 +224,16 @@ main {
         width: 200vw;
         height: auto;
       }
-    }
 
-    .hero-img-overlay {
-      width: 200vw;
-      height: auto;
+       .hero-img-overlay {
+      width: 180vw;
+      height: 95vw;
       transform: rotate(0deg);
     }
+
+    }
+
+   
   }
   @media only screen and (max-width: 640px) {
     .hero-img-sec {
@@ -237,10 +244,6 @@ main {
       object-position: right;
     }
 
-    .hero-img-overlay {
-      transform: rotate(90deg);
-      width: 100vw;
-    }
 
     .page-para {
       font-size: 2.8vw;

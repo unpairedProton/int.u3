@@ -191,6 +191,9 @@ main .hero-img-sec .hero-img-overlay {
   width: 100%;
   height: auto;
 }
+main .hero-img-sec .hero-img-overlay {
+  width: 78vw;
+}
 main .hero-img-sec .hero-img {
   width: 100%;
   height: auto;
@@ -200,11 +203,11 @@ main .hero-img-sec .hero-img {
     width: 200vw;
     height: auto;
   }
-}
-main .hero-img-sec .hero-img-overlay {
-  width: 200vw;
-  height: auto;
-  transform: rotate(0deg);
+  main .hero-img-sec .hero-img-overlay {
+    width: 180vw;
+    height: 95vw;
+    transform: rotate(0deg);
+  }
 }
 @media only screen and (max-width: 640px) {
   main .hero-img-sec {
@@ -213,10 +216,6 @@ main .hero-img-sec .hero-img-overlay {
   main .hero-img {
     -o-object-position: right;
        object-position: right;
-  }
-  main .hero-img-overlay {
-    transform: rotate(90deg);
-    width: 100vw;
   }
   main .page-para {
     font-size: 2.8vw;

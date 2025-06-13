@@ -5,38 +5,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Willicr</title>
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+  <!-- Glide slider CSS -->
   <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
   <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
-  
   <link rel="stylesheet" href="/src/style.css">
 </head>
 
 <body>
   <div class="container">
+    <!-- Top navigation bar -->
     <header>
       <div class="above-nav-sec">
+        <!-- Career link -->
         <div class="above-nav">
           <h5>Career Opportunities</h5>
         </div>
+        <!-- Phone number -->
         <div class="above-nav">
           <a href="#"><img src="/src/icons/call.svg" alt=""></a>
           <h5>856-627-3535</h5>
         </div>
+        <!-- Address -->
         <div class="above-nav">
           <a href="#"><img src="/src/icons/location.svg" alt=""></a>
           <h5>1 Linden Ave, Gibbsboro, NJ 08026</h5>
         </div>
+        <!-- Search bar -->
         <div class="above-nav" id="search-sec">
           <div id="search-container">
             <span><img src="/src/icons/search.svg" alt=""></span>
             <input type="text" name="search" id="nav_search" placeholder="Search Here">
           </div>
         </div>
+        <!-- Quote button -->
         <div class="above-nav" id="req">
           <h5>Request A Quote Here</h5>
           <a href="#">
@@ -44,77 +51,64 @@
           </a>
         </div>
       </div>
+
+      <!-- Main navigation -->
       <div class="nav-sec">
         <a href="/">
           <img id="logo" src="/src/icons/logo.svg" alt="">
         </a>
 
-        <a href="#" class=" call-icon" >
+        <!-- Mobile call icon -->
+        <a href="#" class="call-icon hidden">
           <img src="/src/icons/call.svg" alt="">
+          
         </a>
 
-        <!-- //hamburger -->
-        <div class="burger-bg " >
-       
-       <img class="menu-icon" src="/src/icons/menu.svg" alt="">
+        <!-- Mobile menu button -->
+        <div class="burger-bg hidden">
+          <img src="/src/icons/menu.svg" alt="" class="menu-icon">
+          <img src="/src/icons/cross.svg" alt="" class="cross-icon hidden">
         </div>
 
+        <!-- Navigation menu -->
         <nav>
-           <div class="burger-bg " >
-       <img  class="cross-icon" src="/src/icons/cross.svg" alt="">
-       
-        </div>
           <li>
-            <a href="/"  class="home-icon">
+            <a href="/">
               <img src="/src/icons/home.svg" alt="">
             </a>
           </li>
           <li><a href="#">About +</a></li>
-          <li><a href="#">
-              Electric Motor Sales
-            </a></li>
-          <li>
-            <a href="">
-              Motor Repair
-            </a>
-          </li>
-          <li><a href="">
-              Field Service
-            </a></li>
-          <li>
-            <a href="">
-              Surplus Electric Motors
-            </a>
-          </li>
-          <li>
-            <a href="">
-              Custom Control Panels
-            </a>
-          </li>
-          <li>
-            <a href="">
-              Applications
-            </a>
-          </li>
+          <li><a href="#">Electric Motor Sales</a></li>
+          <li><a href="">Motor Repair</a></li>
+          <li><a href="">Field Service</a></li>
+          <li><a href="">Surplus Electric Motors</a></li>
+          <li><a href="">Custom Control Panels</a></li>
+          <li><a href="">Applications</a></li>
         </nav>
       </div>
     </header>
+
+    <!-- Main content -->
     <main>
+      <!-- Hero section with background -->
       <div class="hero-img-sec">
         <img class="hero-img" src="/src/images/hero.webp" alt="">
         <img class="hero-img-overlay" src="/src/images/hero_rect.webp" alt="">
       </div>
+
+      <!-- Hero text content -->
       <section class="hero-section">
         <h2 class="page-small-title">ELECTRIC MOTOR REPAIR COMPANY</h2>
         <h1>Powering Industry <br>
           with Precision, Performance & Reliability</h1>
         <p class="page-para">We specialize in everything electric motor related in New Jersey —from sales to service and
-          everything in
-          between. Whether you're looking for close-coupled pumps, single-phase<br> motors, HVAC-specific solutions, or
+          everything in between. Whether you're looking for close-coupled pumps, single-phase<br> motors, HVAC-specific solutions, or
           metric frame electric motors, we've got the inventory, the experience, and the know-how to get the job done
           right.</p>
         <button type="button" class="btn">Request A Quote</button>
       </section>
+
+      <!-- Quote form section -->
       <section class="form-con">
         <div class="form-sec">
           <form action="" method="get">
@@ -129,19 +123,16 @@
               <input class="form-input" type="text" placeholder="Company Name">
             </div>
 
-
             <textarea name="msg" rows="5" id="msg-input" placeholder="Write Your Message Here"></textarea>
-            <div class="quote-submit ">
+            <div class="quote-submit">
               <input class="btn" type="button" value="Submit Form">
             </div>
-
           </form>
-
         </div>
-        <div class="blu-line">
-
-        </div>
+        <div class="blu-line"></div>
       </section>
+
+      <!-- About section -->
       <section class="about-sec">
         <img src="/src/images/about.webp" alt="">
         <section>
@@ -153,34 +144,34 @@
                 service, premium-quality products, and long-standing partnerships with the industries that keep our
                 communities running. From water and sewer plants to glass manufacturers and HVAC contractors, we proudly
                 serve organizations across Gibbsboro, New Jersey, and beyond—offering expert motor repair,
-                top-of-the-line
-                equipment, and 24/7 service when you need it most.</p>
+                top-of-the-line equipment, and 24/7 service when you need it most.</p>
               <p class="page-para">We also offer custom control panel builds in our UL-certified panel shop—engineered
-                and
-                fabricated to your exact specs, with complete compliance and long-term durability in mind</p>
+                and fabricated to your exact specs, with complete compliance and long-term durability in mind</p>
             </div>
             <button type="button" class="btn">Request A Quote</button>
           </article>
+
+          <!-- Additional services -->
           <section class="more-sec">
             <div class="more-left page-small-title">
               Looking for more than just a motor? We also carry:
             </div>
-            <ul class="more-right page-para ">
+            <ul class="more-right page-para">
               <li>Gear Reducers</li>
               <li>Soft Starters</li>
-              <li>
-                Adjustable Frequency Drives</li>
+              <li>Adjustable Frequency Drives</li>
               <li>Used Electric Motors</li>
               <li>And more</li>
             </ul>
           </section>
         </section>
-
       </section>
+
+      <!-- Logo slider -->
       <section class="slider">
         <div class="glide">
           <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides  slides">
+            <ul class="glide__slides slides">
               <li class="glide__slide"><img class="slider-img" src="/src/images/weg.webp" alt="Slide 11"></li>
               <li class="glide__slide"><img class="slider-img" src="/src/images/baldor.webp" alt="Slide 2"></li>
               <li class="glide__slide"><img class="slider-img" src="/src/images/leeson.webp" alt="Slide 6"></li>

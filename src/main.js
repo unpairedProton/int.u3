@@ -1,17 +1,18 @@
 import Glide from '@glidejs/glide';
 
-const aboveNavMenu=document.querySelector('.above-nav-sec')
+// Get DOM elements
+const aboveNavMenu = document.querySelector('.above-nav-sec')
 const logo = document.getElementById('logo')
 const menuIcon = document.querySelector('.menu-icon')
 const crossIcon = document.querySelector('.cross-icon')
 const navbar = document.querySelector('nav')
 
-
 document.addEventListener('DOMContentLoaded', function () {
+  // Initialize logo slider
   if (document.querySelector('.glide')) {
     new Glide('.glide', {
       type: 'carousel',
-      autoplay:2000,
+      autoplay: 2000,
       perView: 6,
       gap: 0,
       breakpoints: {
@@ -21,63 +22,48 @@ document.addEventListener('DOMContentLoaded', function () {
     }).mount();
   }
 
-   checkWindowSize();
-   setupNavbarToggle();
+  // Setup responsive behavior
+  checkWindowSize();
+  setupNavbarToggle();
 });
 
+// Handle mobile menu toggle
 function setupNavbarToggle() {
- 
-
   if (crossIcon && navbar) {
     crossIcon.addEventListener('click', () => {
       navbar.style.right = '-100%';
-      console.log("clicked");
-      
     });
   }
 
   if (menuIcon && navbar) {
     menuIcon.addEventListener('click', () => {
       navbar.style.right = '0';
-      console.log("clicked r");
     });
   }
 }
 
+// Check window size and adjust layout
 function checkWindowSize() {
   const callIcon = document.querySelector('.call-icon');
   const burgerBg = document.querySelector('.burger-bg');
+
   if (window.innerWidth <= 640) {
+    // Mobile layout
     if (callIcon) callIcon.classList.remove('hidden');
     if (burgerBg) burgerBg.classList.remove('hidden');
-
-    //nav-menu
-    if(aboveNavMenu) {
-      aboveNavMenu.style.display="none"
-    }
-
-    if(logo) {
-      logo.style.width="20vw"
-    }
-
-  }
-
-  else{
-     if (callIcon) callIcon.classList.add('hidden');
-
-      if (burgerBg) burgerBg.classList.add('hidden');
-
-        if(aboveNavMenu) {
-      aboveNavMenu.style.display="flex"
-    }
-
-    if(logo) {
-      logo.style.width="11vw"
-    }
+    if (aboveNavMenu) aboveNavMenu.style.display = "none";
+    if (logo) logo.style.width = "20vw";
+  } else {
+    // Desktop layout
+    if (callIcon) callIcon.classList.add('hidden');
+    if (burgerBg) burgerBg.classList.add('hidden');
+    if (aboveNavMenu) aboveNavMenu.style.display = "flex";
+    if (logo) logo.style.width = "11vw";
   }
 }
 
-window.addEventListener('resize',()=>{
+// Update layout on window resize
+window.addEventListener('resize', () => {
   checkWindowSize()
 })
 
